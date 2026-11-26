@@ -1,0 +1,468 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Тверская СпецТехника — аренда спецтехники в Твери</title>
+    <meta name="description" content="Аренда автовышки, автокрана и ломовоза в Твери и Тверской области. Выполняем различные виды работ. Подробности по телефону.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #080808;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 3px solid #ffcc00;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            min-height: 480px;
+            padding: 100px 8%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(90deg, #080808, #252525);
+            border-bottom: 3px solid #ffcc00;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            max-width: 750px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #ffcc00;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            width: fit-content;
+            padding: 14px 28px;
+            background: #ffcc00;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #e5b800;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            font-size: 34px;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ffcc00;
+        }
+
+        .equipment {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #202020;
+            border: 1px solid #444;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #ffcc00;
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #ffcc00;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+
+        .price {
+            color: #ffcc00 !important;
+            font-size: 21px;
+            font-weight: bold;
+            margin-top: 18px;
+        }
+
+        .phone {
+            display: inline-block;
+            color: #ffcc00;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 15px 0;
+        }
+
+        .phone:hover {
+            text-decoration: underline;
+        }
+
+        .card .button {
+            display: block;
+            text-align: center;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .about {
+            background: #1c1c1c;
+        }
+
+        .about p {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #ddd;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background: #202020;
+            border-left: 4px solid #ffcc00;
+            padding: 22px;
+            border-radius: 5px;
+        }
+
+        .service h3 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .contacts {
+            text-align: center;
+            background: #1c1c1c;
+        }
+
+        .contacts p {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .contacts a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #080808;
+            color: #999;
+            border-top: 3px solid #ffcc00;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">ТВЕРСКАЯ СПЕЦТЕХНИКА</div>
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#equipment">Техника</a>
+        <a href="#about">О компании</a>
+        <a href="#services">Услуги</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- ГЛАВНАЯ -->
+
+    <section class="hero" id="home">
+        <h1>
+            АРЕНДА <span>СПЕЦТЕХНИКИ</span><br>
+            В ТВЕРИ И ОБЛАСТИ
+        </h1>
+
+        <p>
+            Автовышка, автокран и ломовоз.<br>
+            Надёжная техника для выполнения ваших задач.
+        </p>
+
+        <a href="#equipment" class="button">Посмотреть технику</a>
+    </section>
+
+    <!-- НАША ТЕХНИКА -->
+
+    <section id="equipment">
+        <h2 class="section-title">Наша техника</h2>
+
+        <div class="equipment">
+
+            <!-- АВТОВЫШКА -->
+
+            <div class="card">
+                <h3>Автовышка ЗИЛ-4331</h3>
+
+                <p>Высота подъёма: 22 метра</p>
+                <p>Грузоподъёмность люльки: 300 кг</p>
+                <p>Вместимость: до 3 человек</p>
+                <p>Поворот стрелы: 360°</p>
+
+                <p class="price">От 2 500 ₽ / час</p>
+                <p>Минимальный заказ: 4 часа</p>
+                <p>Минимальная стоимость: 10 000 ₽</p>
+
+                <p>Оплата наличными и безналичным способом</p>
+
+                <a class="phone" href="tel:+79201591719">
+                    +7 920 159-17-19
+                </a>
+
+                <a class="button" href="tel:+79201591719">
+                    Заказать автовышку
+                </a>
+            </div>
+
+            <!-- АВТОКРАН -->
+
+            <div class="card">
+                <h3>Автокран</h3>
+
+                <p>Грузоподъёмность: 25 тонн</p>
+                <p>Вылет стрелы: 21 метр</p>
+                <p>Поворот платформы: 360°</p>
+                <p>Возможна работа с люлькой</p>
+                <p>Грузоподъёмность люльки: 200 кг</p>
+                <p>Вместимость люльки: до 2 человек</p>
+
+                <p class="price">От 2 500 ₽ / час</p>
+                <p>Минимальный заказ: от 4 часов</p>
+                <p>Минимальная стоимость: 10 000 ₽</p>
+
+                <p>Оплата наличными и безналичным способом</p>
+
+                <a class="phone" href="tel:+79106487349">
+                    +7 910 648-73-49
+                </a>
+
+                <a class="button" href="tel:+79106487349">
+                    Заказать автокран
+                </a>
+            </div>
+
+            <!-- ЛОМОВОЗ -->
+
+            <div class="card">
+                <h3>Ломовоз</h3>
+
+                <p>Объём кузова: 27 м³</p>
+                <p>Грузоподъёмность: 7 тонн</p>
+
+                <p class="price">Цена договорная</p>
+
+                <p>Оплата наличными и безналичным способом</p>
+
+                <a class="phone" href="tel:+79607151970">
+                    +7 960 715-19-70
+                </a>
+
+                <a class="button" href="tel:+79607151970">
+                    Заказать ломовоз
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- О КОМПАНИИ -->
+
+    <section class="about" id="about">
+        <h2 class="section-title">О компании</h2>
+
+        <p>
+            «Тверская СпецТехника» предоставляет различные услуги
+            в Твери и Тверской области. Мы выполняем различные работы
+            по подъёму людей на высоту с помощью автовышки,
+            различные работы с помощью автокрана, а также вывоз
+            металлолома на ломовозе.
+            По всем вопросам обращайтесь по телефону для получения
+            подробной информации и уточнения полной стоимости работ.
+        </p>
+    </section>
+
+    <!-- НАШИ УСЛУГИ -->
+
+    <section id="services">
+        <h2 class="section-title">Наши услуги</h2>
+
+        <div class="services">
+
+            <div class="service">
+                <h3>Автовышка</h3>
+                <p>
+                    Выполняем любые виды высотных работ.
+                    Подробности уточняйте по телефону.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Автокран</h3>
+                <p>
+                    Выполняем любые виды работ с использованием автокрана.
+                    Подробности уточняйте по телефону.
+                </p>
+            </div>
+
+            <div class="service">
+                <h3>Ломовоз</h3>
+                <p>
+                    Выполняем любые работы по вывозу и перевозке металлолома.
+                    Подробности уточняйте по телефону.
+                </p>
+            </div>
+
+        </div>
+
+        <p style="text-align:center; margin-top:30px; color:#ffcc00; font-size:19px; font-weight:bold;">
+            Выполняем любые виды работ!
+        </p>
+
+        <p style="text-align:center; margin-top:10px; color:#ccc;">
+            Подробности, условия и стоимость услуг уточняйте по телефону.
+        </p>
+
+        <p style="text-align:center; margin-top:10px; color:#ccc;">
+            Работаем в Твери и Тверской области.
+        </p>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+
+    <section class="contacts" id="contacts">
+        <h2 class="section-title">Свяжитесь с нами</h2>
+
+        <p>Тверь и Тверская область</p>
+
+        <p>
+            Автовышка:
+            <a href="tel:+79201591719">+7 920 159-17-19</a>
+        </p>
+
+        <p>
+            Автокран:
+            <a href="tel:+79106487349">+7 910 648-73-49</a>
+        </p>
+
+        <p>
+            Ломовоз:
+            <a href="tel:+79607151970">+7 960 715-19-70</a>
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 «Тверская СпецТехника». Все права защищены.
+    <p>Тверь и Тверская область</p>
+</footer>
+
+</body>
+</html>
